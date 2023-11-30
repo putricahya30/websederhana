@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)file:///C:/Users/putri/Downloads/qgis2web_2023_11_30-22_12_40_447398/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./index_files/ol.css">
+        <link rel="stylesheet" href="./index_files/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./index_files/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./index_files/qgis2web.css">
+<style>
+.search-layer {
+  top: 100px;
+  left: .5em;
+}
+.ol-touch .search-layer {
+  top: 130px;
+}
+</style>
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control button {
+            background-color: #f8f8f8 !important;
+            color: #000000 !important;
+            border-radius: 0px !important;
+        }
+        .ol-zoom, .geolocate, .gcd-gl-control .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 3px !important;
+        }
+        .ol-scale-line {
+            background: none !important;
+        }
+        .ol-scale-line-inner {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            color: black !important;
+        }
+        </style>
+<style>
+.tooltip {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+.tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+.tooltip-static {
+  background-color: #ffcc33;
+  color: black;
+  border: 1px solid white;
+}
+.tooltip-measure:before,
+.tooltip-static:before {
+  border-top: 6px solid rgba(0, 0, 0, 0.5);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  margin-left: -7px;
+  left: 50%;
+}
+.tooltip-static:before {
+  border-top-color: #ffcc33;
+}
+.measure-control {
+  top: 65px;
+  left: .5em;
+  display: flex;
+}
+.ol-touch .measure-control {
+  top: 80px;
+}
+.measure-control label {
+  padding: 1px;
+  padding-right: 4px;
+}
+</style>
+        <style>
+        #map {
+            width: 965px;
+            height: 541px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+            
+        <div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div class="ol-unselectable ol-layers" style="position: absolute; width: 100%; height: 100%; z-index: 0;"><div class="ol-layer" style="position: absolute; width: 100%; height: 100%;"><canvas width="965" height="541" style="position: absolute; left: 0px; transform-origin: left top; transform: matrix(1, 0, 0, 1, 0, 0);"></canvas></div></div><div class="ol-overlaycontainer" style="position: absolute; z-index: 0; width: 100%; height: 100%; pointer-events: none;"></div><div class="ol-overlaycontainer-stopevent" style="position: absolute; z-index: 0; width: 100%; height: 100%; pointer-events: none;"><div class="ol-overlay-container ol-selectable" style="position: absolute; pointer-events: auto; display: none;"><div id="popup" class="ol-popup">
+                <a href="file:///C:/Users/putri/Downloads/qgis2web_2023_11_30-22_12_40_447398/index.html#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div></div><div class="ol-zoom ol-unselectable ol-control" style="pointer-events: auto;"><button class="ol-zoom-in" type="button" title="Zoom in">+</button><button class="ol-zoom-out" type="button" title="Zoom out">−</button></div><div class="ol-rotate ol-unselectable ol-control ol-hidden" style="pointer-events: auto;"><button class="ol-rotate-reset" type="button" title="Reset rotation"><span class="ol-compass" style="transform: rotate(0rad);">⇧</span></button></div><div class="ol-attribution ol-unselectable ol-control ol-uncollapsible" style="pointer-events: auto;"><ul><li><a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> · </li><li><a href="https://openlayers.org/">OpenLayers</a> · </li><li><a href="https://qgis.org/">QGIS</a></li><li> </li></ul><button type="button" title="Attributions"><span>i</span></button></div><div class="measure-control ol-unselectable ol-control" style="pointer-events: auto;"><button class=" fas fa-ruler "></button><label style="display: none;">&nbsp;Measure:&nbsp;<select id="type"><option value="LineString">Lenght</option><option value="Polygon">Area</option></select></label></div><div class="ol-unselectable ol-control layer-switcher shown" style="pointer-events: auto;"><button title="Layers"></button><div class="panel"><ul><li class="layer"><input type="checkbox" id="b6c4893c-418a-4e87-bd22-96981a325760"><label for="b6c4893c-418a-4e87-bd22-96981a325760"><img src="./index_files/SUNGAI_LN_25K_6.png"> SUNGAI_LN_25K</label></li><li class="layer"><input type="checkbox" id="586e2da7-f132-4995-8bae-779c6fe4fdb8"><label for="586e2da7-f132-4995-8bae-779c6fe4fdb8"><img src="./index_files/RAWA_AR_25K_5.png"> RAWA_AR_25K</label></li><li class="layer"><input type="checkbox" id="e69e8376-c693-4529-a16c-78d87ce5acc1"><label for="e69e8376-c693-4529-a16c-78d87ce5acc1"><img src="./index_files/PEMUKIMAN_AR_25K_4.png"> PEMUKIMAN_AR_25K</label></li><li class="layer"><input type="checkbox" id="a93b6a52-8d87-4e76-b92e-b295f41fe1b4"><label for="a93b6a52-8d87-4e76-b92e-b295f41fe1b4"><img src="./index_files/KONTUR_LN_25K_3.png"> KONTUR_LN_25K</label></li><li class="layer"><input type="checkbox" id="32823915-0f5d-4e52-a452-483a89660a26"><label for="32823915-0f5d-4e52-a452-483a89660a26"><img src="./index_files/JEMBATAN_LN_25K_2.png"> JEMBATAN_LN_25K</label></li><li class="layer"><input type="checkbox" id="d1d5011b-deb0-47af-90a2-661f2513de7f"><label for="d1d5011b-deb0-47af-90a2-661f2513de7f"><img src="./index_files/JALAN_LN_25K_1.png"> JALAN_LN_25K</label></li><li class="layer"><input type="checkbox" id="4c7967c7-090b-4b03-98c3-96deb1de6d3d"><label for="4c7967c7-090b-4b03-98c3-96deb1de6d3d"><img src="./index_files/kabupatensidoarjo_0.png"> kabupaten sidoarjo</label></li></ul></div></div></div></div></div>
+        <script src="./index_files/qgis2web_expressions.js.download"></script>
+        <script src="./index_files/polyfills.js.download"></script>
+        <script src="./index_files/functions.js.download"></script>
+        <script src="./index_files/ol.js.download"></script>
+        <script src="./index_files/ol-layerswitcher.js.download"></script>
+        <script src="./index_files/kabupatensidoarjo_0.js.download"></script><script src="./index_files/JALAN_LN_25K_1.js.download"></script><script src="./index_files/JEMBATAN_LN_25K_2.js.download"></script><script src="./index_files/KONTUR_LN_25K_3.js.download"></script><script src="./index_files/PEMUKIMAN_AR_25K_4.js.download"></script><script src="./index_files/RAWA_AR_25K_5.js.download"></script><script src="./index_files/SUNGAI_LN_25K_6.js.download"></script>
+        <script src="./index_files/kabupatensidoarjo_0_style.js.download"></script><script src="./index_files/JALAN_LN_25K_1_style.js.download"></script><script src="./index_files/JEMBATAN_LN_25K_2_style.js.download"></script><script src="./index_files/KONTUR_LN_25K_3_style.js.download"></script><script src="./index_files/PEMUKIMAN_AR_25K_4_style.js.download"></script><script src="./index_files/RAWA_AR_25K_5_style.js.download"></script><script src="./index_files/SUNGAI_LN_25K_6_style.js.download"></script>
+        <script src="./index_files/layers.js.download" type="text/javascript"></script> 
+        <script src="./index_files/Autolinker.min.js.download"></script>
+        <script src="./index_files/qgis2web.js.download"></script>
+    
+
+</body></html>
